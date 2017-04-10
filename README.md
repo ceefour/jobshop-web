@@ -2,7 +2,12 @@
 
 by Hendy Irawan
 
-## Compiling jobshop backend
+## jobshop folder
+
+jobshop folder contains prebuilt jobshop for Windows (`jobshop.exe`) and
+for Linux amd64 (`jobshop`).
+
+## Re-compiling jobshop backend
 
     gcc jobshop.c simlib.c -lm -o jobshop
 

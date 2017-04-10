@@ -1,5 +1,6 @@
 from flask import Flask, render_template, flash, redirect, request, url_for
 import subprocess
+import os
 
 app = Flask(__name__)
 app.secret_key = 'super secret key'
@@ -16,10 +17,10 @@ def jobshop():
     # command = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.exe'
     # in_fname = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.in'
     # outfile = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.out'
-    workdir = 'E:/project_amanah/S3/model-simulasi/SIMLIB'
-    command = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.exe'
-    in_fname = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.in'
-    outfile = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.out'
+    workdir = 'jobshop'
+    command = 'jobshop/jobshop.exe' if os.name == 'nt' else 'jobshop/jobshop'
+    in_fname = 'jobshop/jobshop.in'
+    outfile = 'jobshop/jobshop.out'
 
     # check if the post request has the file part
     if 'infile' not in request.files:
