@@ -2,6 +2,10 @@
 
 by Hendy Irawan
 
+## Compiling jobshop backend
+
+    gcc jobshop.c simlib.c -o jobshop
+
 ## Launch
 
     pip install Flask
