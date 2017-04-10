@@ -17,10 +17,11 @@ def jobshop():
     # command = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.exe'
     # in_fname = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.in'
     # outfile = 'E:/project_amanah/S3/model-simulasi/SIMLIB/jobshop.out'
-    workdir = 'jobshop'
-    command = 'jobshop/jobshop.exe' if os.name == 'nt' else 'jobshop/jobshop'
-    in_fname = 'jobshop/jobshop.in'
-    outfile = 'jobshop/jobshop.out'
+    srcdir = os.path.dirname(os.path.abspath(__file__))
+    workdir = srcdir + '/jobshop'
+    command = workdir + '/jobshop.exe' if os.name == 'nt' else workdir + '/jobshop'
+    in_fname = workdir + '/jobshop.in'
+    outfile = workdir + '/jobshop.out'
 
     # check if the post request has the file part
     if 'infile' not in request.files:
