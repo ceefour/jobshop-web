@@ -4,7 +4,13 @@ by Hendy Irawan
 
 ## Compiling jobshop backend
 
-    gcc jobshop.c simlib.c -o jobshop
+    gcc jobshop.c simlib.c -lm -o jobshop
+
+If you get:
+
+    simlib.c:(.text+0x15f1): undefined reference to `log'
+
+Make sure you include `-lm`
 
 ## Launch
 
