@@ -21,17 +21,17 @@ Make sure you include `-lm`
 
     pip install Flask
 
-Better way for debug mode:
+Better way for debug mode (Windows):
 
     set FLASK_APP=jobshop-web.py
     set FLASK_DEBUG=1
     flask run --host=0.0.0.0
 
-Better way for production mode:
+Better way for production mode (Linux):
 
-    set FLASK_APP=jobshop-web.py
-    set FLASK_DEBUG=0
-    python -m flask run --host=0.0.0.0
+    export FLASK_APP=jobshop-web.py
+    export FLASK_DEBUG=0
+    flask run --host=0.0.0.0
 
 Old way:
 
