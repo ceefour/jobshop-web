@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Simulation Results</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <pre>
+      {{ jobshop_out }}
+  </pre>
+{% endblock %}

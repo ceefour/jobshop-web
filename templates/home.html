@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Run Simulation</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <form class="form-horizontal" action="{{ url_for('jobshop') }}" method=post enctype="multipart/form-data">
+      <div class="form-group">
+          <label class="col-sm-2 control-label">Input file</label>
+          <div class="col-sm-10">
+              <input type="file" name="infile" requirex/>
+          </div>
+      </div>
+      <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Run</button>
+            </div>
+        </div>
+  </form>
+{% endblock %}
